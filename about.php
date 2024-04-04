@@ -50,10 +50,10 @@
     <div class="section__container">
       <div class="content">
         <h1 class="title">
-          <span>ProCap Solutions d.o.o.<br /></span> Vaši partnerji pri IQ napovednih storitvah.
+          <span>ForCap Solutions d.o.o.<br /></span> Vaši partnerji pri IQ napovednih storitvah.
         </h1>
         <p class="description">
-        Kot del podjetja ProCap Solutions d.o.o. podjetja z napovednimi modeli 
+        Kot del podjetja ForCap Solutions d.o.o. podjetja z napovednimi modeli 
         kot so FarmIQ ter FloodIQ, naša ekipa izkušenih inženirjev iz področja strojnega učenja,
         ter umetne inteligence dela dan in noč, da vam ponudi najkakovostnejše storitve, ki 
         izboljšajo življenja ljudi. 
@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="image">
-        <img src="procap_wall.jpg" alt="profile" />
+        <img src="forcap_logo.jpg" alt="profile" />
       </div>
     </div>
   </section>
