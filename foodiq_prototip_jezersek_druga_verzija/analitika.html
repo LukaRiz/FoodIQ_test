@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <title>FoodIQ - Analitika</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="assets/0707__2__1_-removebg.png">
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index2.html">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Glavna plošča</h3>
+                </a>
+                <a href="uporabniki.html">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Uporabniki</h3>
+                </a>
+                <a href="zgodovina.html">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>Zgodovina</h3>
+                </a>
+                <a href="analitika.html" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analize</h3>
+                </a>
+                <a href="uredi_napoved.html">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Uredi zadnjo napoved za dan 27.10.2024</h3>
+                </a>
+                <a href="index.html">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Odjava</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h2>Tedenska analiza napovedi</h2>
+            <div class="analytics-container">
+                <p>Analiza tedenskih napovedi v primerjavi z dejansko porabo. Podatki prikazujejo natančnost napovedi in oceno.</p>
+
+                <table id="analyticsTable">
+                    <thead>
+                        <tr>
+                            <th>Dan</th>
+                            <th>Napoved (kg)</th>
+                            <th>Dejansko (kg)</th>
+                            <th>Razlika (kg)</th>
+                            <th>Odstotek natančnosti</th>
+                            <th>Ocena</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Example data for each day of the week -->
+                        <tr>
+                            <td>Ponedeljek</td>
+                            <td>150</td>
+                            <td>144</td>
+                            <td>-6</td>
+                            <td>96%</td>
+                            <td>Boljše</td>
+                        </tr>
+                        <tr>
+                            <td>Torek</td>
+                            <td>100</td>
+                            <td>97</td>
+                            <td>-3</td>
+                            <td>97%</td>
+                            <td>Boljše</td>
+                        </tr>
+                        <tr>
+                            <td>Sreda</td>
+                            <td>80</td>
+                            <td>79</td>
+                            <td>-1</td>
+                            <td>99%</td>
+                            <td>Boljše</td>
+                        </tr>
+                        <tr>
+                            <td>Četrtek</td>
+                            <td>60</td>
+                            <td>58</td>
+                            <td>-2</td>
+                            <td>97%</td>
+                            <td>Boljše</td>
+                        </tr>
+                        <tr>
+                            <td>Petek</td>
+                            <td>200</td>
+                            <td>190</td>
+                            <td>-10</td>
+                            <td>95%</td>
+                            <td>Boljše</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <!-- End of Main Content -->
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <title>FoodIQ Povzetek</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="assets/0707__2__1_-removebg.png">
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index2.html">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Glavna plošča</h3>
+                </a>
+                <a href="uporabniki.html">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Uporabniki</h3>
+                </a>
+                <a href="zgodovina.html">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>Zgodovina</h3>
+                </a>
+                <a href="analitika.html" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analize</h3>
+                </a>
+                <a href="uredi_napoved.html">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Uredi napoved za dan 27.10.2024</h3>
+                </a>
+                <a href="index.html">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Odjava</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h2>Povzetek izbranih parametrov</h2>
+            <div class="summary-container">
+                <table id="summaryTable">
+                    <tbody>
+                        <!-- Data will be populated here by JavaScript -->
+                    </tbody>
+                </table>
+                <p id="prediction">Za izbran meni boste potrebovali približno 150 kg glavne jedi, 20 kg priloge ter 30 kg sladice.</p>
+                <button onclick="goToHome()">Potrdi</button>
+            </div>
+        </main>
+        <!-- End of Main Content -->
+    </div>
+
+    <script>
+        // Function to load and display form data from localStorage
+        document.addEventListener('DOMContentLoaded', function () {
+            const formData = JSON.parse(localStorage.getItem('formData'));
+
+            if (formData) {
+                const tableBody = document.querySelector('#summaryTable tbody');
+                tableBody.innerHTML = `
+                    <tr><td>Tip obroka:</td><td>${formData.mealType}</td></tr>
+                    <tr><td>Število učencev:</td><td>${formData.studentCount}</td></tr>
+                    <tr><td>Dan:</td><td>${formData.day}</td></tr>
+                    <tr><td>Glavna jed:</td><td>${formData.mainDish}</td></tr>
+                    <tr><td>Priloga:</td><td>${formData.sideDish}</td></tr>
+                    <tr><td>Sladica:</td><td>${formData.dessert}</td></tr>
+                `;
+            }
+        });
+
+        // Function to return to the main page
+        function goToHome() {
+            window.location.href = 'index.html';
+        }
+    </script>
+</body>
+
+</html>

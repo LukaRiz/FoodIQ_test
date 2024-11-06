@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <title>FoodIQ - Uredi Napoved</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="assets/0707__2__1_-removebg.png">
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index2.html">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Glavna plošča</h3>
+                </a>
+                <a href="uporabniki.html">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Uporabniki</h3>
+                </a>
+                <a href="zgodovina.html">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>Zgodovina</h3>
+                </a>
+                <a href="analitika.html">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analize</h3>
+                </a>
+                <a href="uredi_napoved.html" class="active">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Uredi zadnjo napoved za dan 27.10.2024</h3>
+                </a>
+                <a href="index.html">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Odjava</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h2>Uredi Napoved</h2>
+            <div class="event-container">
+                <form id="editForm">
+                    <!-- Tip obroka -->
+                    <label for="mealType">Tip obroka:</label>
+                    <select id="mealType" required>
+                        <option value="Malica">Malica</option>
+                        <option value="Kosilo">Kosilo</option>
+                        <option value="Popoldanska malica">Popoldanska malica</option>
+                    </select><br>
+
+                    <!-- Število učencev -->
+                    <label for="studentCount">Število učencev:</label>
+                    <input type="number" id="studentCount" required><br>
+
+                    <!-- Dan -->
+                    <label for="day">Dan:</label>
+                    <input type="date" id="day" required><br>
+
+                    <!-- Glavna jed -->
+                    <label for="mainDish">Vrsta glavne jedi:</label>
+                    <select id="mainDish" required>
+                        <option value="Piščanec">Piščanec</option>
+                        <option value="Rižota">Rižota</option>
+                        <option value="Sarma">Sarma</option>
+                        <option value="Špageti">Špageti</option>
+                        <option value="Golaž">Golaž</option>
+                    </select><br>
+
+                    <!-- Priloga -->
+                    <label for="sideDish">Tip priloge:</label>
+                    <select id="sideDish" required>
+                        <option value="Solata">Solata</option>
+                        <option value="Zelje">Zelje</option>
+                        <option value="Krompir">Krompir</option>
+                        <option value="Fižol">Fižol</option>
+                        <option value="Riž">Riž</option>
+                    </select><br>
+
+                    <!-- Sladica -->
+                    <label for="dessert">Sladica:</label>
+                    <select id="dessert" required>
+                        <option value="Tortica">Tortica</option>
+                        <option value="Kompot">Kompot</option>
+                        <option value="Jabolko">Jabolko</option>
+                        <option value="Keks">Keks</option>
+                        <option value="Sladoled">Sladoled</option>
+                    </select><br>
+
+                    <button type="button" onclick="submitDemo()">Shrani spremembe</button>
+                </form>
+            </div>
+        </main>
+        <!-- End of Main Content -->
+    </div>
+
+    <script>
+        // Load existing prediction data from localStorage and populate form fields
+        document.addEventListener("DOMContentLoaded", function() {
+            const prediction = JSON.parse(localStorage.getItem("formData"));
+
+            if (prediction) {
+                document.getElementById("mealType").value = prediction.mealType;
+                document.getElementById("studentCount").value = prediction.studentCount;
+                document.getElementById("day").value = prediction.day;
+                document.getElementById("mainDish").value = prediction.mainDish;
+                document.getElementById("sideDish").value = prediction.sideDish;
+                document.getElementById("dessert").value = prediction.dessert;
+            }
+        });
+
+        // Demo function to simulate form submission
+        function submitDemo() {
+            alert("Spremembe so bile shranjene (demo).");
+        }
+    </script>
+
+</body>
+
+</html>

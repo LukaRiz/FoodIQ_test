@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <title>FoodIQ</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar Section -->
+        <aside>
+            <div class="toggle">
+                <div class="logo">
+                    <img src="assets/0707__2__1_-removebg.png">
+                </div>
+                <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <a href="index2.html">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                    <h3>Glavna plošča</h3>
+                </a>
+                <a href="uporabniki.html">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                    <h3>Uporabniki</h3>
+                </a>
+                <a href="zgodovina.html">
+                    <span class="material-icons-sharp">
+                        receipt_long
+                    </span>
+                    <h3>Zgodovina</h3>
+                </a>
+                <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                    <h3>Analize</h3>
+                </a>
+                <a href="uredi_napoved.html">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                    <h3>Uredi zadnjo napoved za dan 27.10.2024</h3>
+                </a>
+                <a href="index.html">
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                    <h3>Odjava</h3>
+                </a>
+            </div>
+        </aside>
+        <!-- End of Sidebar Section -->
+
+        <!-- Main Content -->
+        <main>
+            <h2>Povzetek menija</h2>
+            <div class="summary-container">
+                <table id="summaryTable">
+                    <thead>
+                        <tr>
+                            <th>Jed</th>
+                            <th>Teza</th>
+                            <th>Količina</th>
+                            <th>Skupna teža</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tbody>
+                            <tr>
+                                <td>Piščanec</td>
+                                <td>150kg</td>
+                                <td>144kg</td>
+                                <td>28.10.2024</td>
+                            </tr>
+                            <tr>
+                                <td>Riž</td>
+                                <td>100kg</td>
+                                <td>97kg</td>
+                                <td>27.10.2024</td>
+                            </tr>
+                            <tr>
+                                <td>Solata</td>
+                                <td>80kg</td>
+                                <td>79kg</td>
+                                <td>26.10.2024</td>
+                            </tr>
+                            <tr>
+                                <td>Juha</td>
+                                <td>60kg</td>
+                                <td>58kg</td>
+                                <td>25.10.2024</td>
+                            </tr>
+                            <tr>
+                                <td>Testenine</td>
+                                <td>200kg</td>
+                                <td>190kg</td>
+                                <td>24.10.2024</td>
+                            </tr>
+                        </tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </main>
+        <!-- End of Main Content -->
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const formData = JSON.parse(localStorage.getItem('formData'));
+
+            if (formData) {
+                const tableBody = document.querySelector('#summaryTable tbody');
+                const row = document.createElement('tr');
+
+                row.innerHTML = `
+                    <td>${formData.jed}</td>
+                    <td>${formData.teza}</td>
+                    <td>${formData.kolicina}</td>
+                    <td>${formData.totalWeight}</td>
+                `;
+
+                tableBody.appendChild(row);
+            }
+        });
+    </script>
+</body>
+
+</html>
