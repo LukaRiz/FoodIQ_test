@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i");
+
+
+body {
+  line-height: 1.8;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  visibility: visible;
+  font-family: 'Poppins', sans-serif;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+}
+.container {
+  width: 100%;          /* Razširi na celotno širino zaslona */
+  max-width: 100%;      /* Prepreči omejitev največje širine */
+  padding-left: 0;      /* Odstrani levi padding */
+  padding-right: 0;     /* Odstrani desni padding */
+  margin: 0;            /* Odstrani morebitne zunanje robove */
+}
+
+/* Kartica zavzame celotno širino zaslona in dodaten padding za večji zaslon */
+.card {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+.card-header {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+
+/* Spremeni barvo povezav v navigaciji */
+.nav-link {
+  color: #000000; /* Nastavi želeno barvo */
+  text-decoration: none; /* Odstrani podčrtaj, če ga ne želiš */
+}
+
+/* Barva povezave ob premiku miške */
+.nav-link:hover {
+  color: #5f9101; /* Nastavi barvo, ko uporabnik premakne miško na povezavo */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #000000;
+font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  margin-top: 0; }
+
+h1 {
+  font-size: 36px;
+  line-height: 42px; }
+
+h2 {
+  font-size: 32px;
+  line-height: 36px; }
+
+h3 {
+  font-size: 24px;
+  line-height: 30px; }
+
+h4 {
+  font-size: 18px;
+  line-height: 24px; }
+
+h5 {
+  font-size: 14px;
+  line-height: 18px; }
+
+h6 {
+  font-size: 12px;
+  line-height: 24px; }
